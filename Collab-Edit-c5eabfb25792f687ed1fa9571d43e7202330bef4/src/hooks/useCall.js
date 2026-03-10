@@ -15,12 +15,12 @@ export function useCall(roomId) {
   const [cameraEnabled, setCameraEnabled] = useState(true);
 
   /* ---------------- SOCKET SETUP ---------------- */
-  useEffect(() => {
-    const socket = io("https://13.60.3.39/rtc", {
-      auth: {
-        token: localStorage.getItem("collab_auth_token"),
-      },
-    });
+  const socket = io("https://13.60.3.39", {
+  path: "/rtc/socket.io",
+  auth: {
+    token: localStorage.getItem("collab_auth_token"),
+  }
+});
 
     socketRef.current = socket;
 
