@@ -371,7 +371,7 @@ export default function Room() {
       const token = localStorage.getItem("collab_auth_token");
 
       provider = new HocuspocusProvider({
-        url: "ws://13.60.3.39/collab",
+        url: "wss://13.60.3.39/collab",
         name: id,
         document: ydoc,
         token, // 👈 REQUIRED
