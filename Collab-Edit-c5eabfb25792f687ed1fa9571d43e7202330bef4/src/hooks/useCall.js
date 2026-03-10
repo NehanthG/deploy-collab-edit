@@ -16,7 +16,7 @@ export function useCall(roomId) {
 
   /* ---------------- SOCKET SETUP ---------------- */
   useEffect(() => {
-    const socket = io("https://13.60.3.39", {
+    const socket = io("rtc", {
       auth: {
         token: localStorage.getItem("collab_auth_token"),
       },

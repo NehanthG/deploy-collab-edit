@@ -302,7 +302,7 @@ export default function Room() {
     }
 
     try {
-      const res = await fetch("https://13.60.3.39/api/run", {
+      const res = await fetch("/api/run", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ code, language, stdin: actualStdin }),
@@ -371,7 +371,7 @@ export default function Room() {
       const token = localStorage.getItem("collab_auth_token");
 
       provider = new HocuspocusProvider({
-        url: "wss://13.60.3.39/collab",
+        url: "wss://" + window.location.host + "/collab",
         name: id,
         document: ydoc,
         token, // 👈 REQUIRED
