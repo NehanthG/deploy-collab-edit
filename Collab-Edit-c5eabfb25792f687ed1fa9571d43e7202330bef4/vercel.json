@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    { "source": "/api/(.*)", "destination": "http://13.60.3.39/api/$1" },
+    { "source": "/rtc/(.*)", "destination": "http://13.60.3.39/rtc/$1" },
+    { "source": "/socket.io/(.*)", "destination": "http://13.60.3.39/socket.io/$1" },
+    { "source": "/collab/(.*)", "destination": "http://13.60.3.39/collab/$1" }
+  ]
+}
